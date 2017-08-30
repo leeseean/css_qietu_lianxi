@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>login</title>
+</head>
+<style>
+    .nicknameContent,
+    .nicknameContent * {
+        box-sizing: border-box;
+    }
+
+    .nicknameContent i {
+        font-style: normal;
+    }
+
+    .nicknameContent {
+        font-size: 0;
+        width: 504px;
+        height: 542px;
+        padding: 26px 34px 0 27px;
+        border-radius: 10px;
+        background-color: rgba(0, 0, 0, 0.8);
+        box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2), 0 0 5px 0 rgba(0, 0, 0, 0.2);
+    }
+    .nicknameContent .setNicknameTitle {
+        margin-bottom: 31px;
+        font-size: 0;
+    }
+
+    .nicknameContent .setNicknameTitle>span:nth-child(1) {
+        width: 73px;
+        height: 25px;
+        font-family: PingFangHK;
+        font-size: 18px;
+        font-weight: 600;
+        text-align: left;
+        color: #f6a623;
+        margin-right: 10px;
+    }
+
+    .nicknameContent .setNicknameTitle>span:nth-child(2) {
+        width: 56px;
+        height: 17px;
+        font-family: PingFangHK;
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.8);
+    }
+    .nicknameContent .usernameRow {
+        font-size: 0;
+        margin-left: 75px;
+        margin-bottom: 24px;
+    }
+    .nicknameContent .usernameRow>span:nth-child(1) {
+        width: 64px;
+        height: 22px;
+        font-family: PingFangHK;
+        font-size: 16px;
+        text-align: left;
+        color: #ffffff;
+        margin-right: 22px;        
+    }
+
+    .nicknameContent .usernameRow>span:nth-child(2) {
+        width: 84px;
+        height: 22px;
+        font-family: PingFangHK;
+        font-size: 16px;
+        font-weight: 600;
+        text-align: left;
+        color: #f6a623;
+    }
+    .nicknameContent .nicknameRow {
+        margin-left: 85px;
+        margin-bottom: 26px;
+        font-size: 0;
+    }
+    .nicknameContent .nicknameRow>span:nth-child(1) {
+        width: 54px;
+        height: 22px;
+        font-family: PingFangHK;
+        font-size: 16px;
+        text-align: left;
+        color: #ffffff;
+        margin-right: 22px;
+    }
+
+    .nicknameContent .nicknameRow>span:nth-child(2)>input {
+        width: 278px;
+        height: 30px;
+        border-radius: 3px;
+        background-color: #ffffff;
+    }
+
+    .nicknameContent .nicknameRow>i.nickTips {
+        width: 278px;
+        height: 18px;
+        font-family: PingFangHK;
+        font-size: 12px;
+        line-height: 1.5;
+        text-align: left;
+        color: rgba(255, 255, 255, 0.6);
+        display: block;
+        margin-left: 75px;
+    }
+
+    .nicknameContent .nickLine {
+        width: 440px;
+        height: 2px;
+        opacity: 0.2;
+        border-bottom: solid 1px #979797;
+        margin-bottom: 26px;
+    }
+    .nicknameContent .modifyPsw {
+        font-size: 0;
+        margin-bottom: 43px;
+    }
+    .nicknameContent .modifyPsw>span:nth-child(1) {
+        width: 73px;
+        height: 25px;
+        font-family: PingFangHK;
+        font-size: 18px;
+        font-weight: 600;
+        text-align: left;
+        color: #f6a623;
+        margin-right: 10px;
+    }
+
+    .nicknameContent .modifyPsw>span:nth-child(2) {
+        width: 356px;
+        height: 17px;
+        font-family: PingFangHK;
+        font-size: 12px;
+        font-weight: 600;
+        color: #ffee64;
+    }
+    .nicknameContent .oldPsw {
+        font-size: 0;
+        margin-bottom: 37px; 
+        margin-left: 27px;
+    }
+    .nicknameContent .oldPsw>span:nth-child(1) {
+        width: 112px;
+        height: 18px;
+        font-family: PingFangHK;
+        font-size: 16px;
+        line-height: 1.13;
+        text-align: left;
+        color: #ffffff;
+        margin-right: 22px;
+    }
+
+    .nicknameContent .oldPsw>span:nth-child(2)>input {
+        width: 278px;
+        height: 30px;
+        border-radius: 3px;
+        background-color: #ffffff;
+    }
+    .nicknameContent .newPsw {
+        font-size: 0;
+        margin-bottom: 37px; 
+        margin-left: 43px;
+    }
+    .nicknameContent .newPsw>span:nth-child(1) {
+        width: 96px;
+        height: 18px;
+        font-family: PingFangHK;
+        font-size: 16px;
+        line-height: 1.13;
+        text-align: left;
+        color: #ffffff;
+        margin-right: 22px;
+    }
+
+    .nicknameContent .newPsw>span:nth-child(2)>input {
+        width: 278px;
+        height: 30px;
+        border-radius: 3px;
+        background-color: #ffffff;
+    }
+
+    .nicknameContent .newPsw>i.newPswTip {
+        width: 207px;
+        height: 18px;
+        font-family: PingFangHK;
+        font-size: 12px;
+        line-height: 1.5;
+        text-align: left;
+        color: rgba(255, 255, 255, 0.6);
+        margin-left: 118px;
+    }
+    .nicknameContent .confirmPsw {
+        font-size: 0;
+        margin-left: 43px;
+    }
+    .nicknameContent .confirmPsw>span:nth-child(1) {
+        width: 96px;
+        height: 18px;
+        font-family: PingFangHK;
+        font-size: 16px;
+        line-height: 1.13;
+        text-align: left;
+        color: #ffffff;
+        margin-right: 22px;
+    }
+
+    .nicknameContent .confirmPsw>span:nth-child(2)>input {
+        width: 280px;
+        height: 30px;
+        border-radius: 3px;
+        background-color: #ffffff;
+    }
+
+    .nicknameContent .confirmPsw>i.confirmPswTip {
+        width: 72px;
+        height: 18px;
+        font-family: PingFangHK;
+        font-size: 12px;
+        line-height: 1.5;
+        text-align: left;
+        color: rgba(255, 255, 255, 0.6);
+        margin-left: 118px;
+    }
+</style>
+
+<body>
+    <div class="nicknameContent">
+        <div class="setNicknameTitle">
+            <span>设置昵称</span>
+            <span>(非必填项)</span>
+        </div>
+        <div class="usernameRow">
+            <span>用户名：</span>
+            <span>TESTUSER</span>
+        </div>
+        <div class="nicknameRow">
+            <span>昵&nbsp;称：</span>
+            <span>
+                <input type="text" name="nickname" placeholder="">
+            </span>
+            <i class="nickTips">输入中文、英文、数字、下划线皆可，最多15字符</i>            
+        </div>
+        <div class="nickLine"></div>
+        <div class="modifyPsw">
+            <span>修改密码</span>
+            <span>(非必填项，如果您的账号不是您亲自注册的，建议您尽快修改密码)</span>
+        </div>
+        <div class="oldPsw">
+            <span>当前登录密码：</span>
+            <span>
+                <input type="password" name="" value="">
+            </span>
+        </div>
+        <div class="newPsw">
+            <span>新登录密码：</span>
+            <span>
+                <input type="password" name="" value="">
+            </span>
+            <i class="newPswTip">密码长度6-16位，同时包含字母和数字</i>            
+        </div>
+        <div class="confirmPsw">
+            <span>确认新密码：</span>
+            <span>
+                <input type="password" name="" value="">
+            </span>
+            <i class="confirmPswTip">再次输入密码</i>           
+        </div>
+    </div>
+</body>
+
+</html>
